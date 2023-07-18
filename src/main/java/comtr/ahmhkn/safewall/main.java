@@ -4,9 +4,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class main extends JavaPlugin {
 
+    private static main plugin;
+
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        comtr.ahmhkn.safewall.utilities.protection.register();
 
     }
 
@@ -14,4 +16,10 @@ public final class main extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
     }
+
+
+    public static main getInstance() {
+        return plugin;
+    }
+
 }
