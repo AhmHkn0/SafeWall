@@ -6,7 +6,7 @@
 
     <groupId>SafeWall</groupId>
     <artifactId>SafeWall</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>SafeWall</name>
@@ -19,6 +19,7 @@
     <url>https://ahmhkn.com.tr</url>
 
     <build>
+        <finalName>SafeWall</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

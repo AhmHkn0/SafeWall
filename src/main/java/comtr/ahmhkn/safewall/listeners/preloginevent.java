@@ -27,13 +27,19 @@ public class preloginevent implements Listener {
                     main.getInstance().getLogger().info("["+name+"] "+uuid+" added to whitelist.");
                 }
             }, 10L);
-
         } else {
             protection.addThreshold();
+            if (protection.getThreshold() >= main.getInstance().getConfig().getInt("threshold")) {
+                protection.activateProtection();
+                main.getInstance().getLogger().info("§aBot Protection activated.");
+                Bukkit.getScheduler().runTaskLater(main.getInstance(), () -> {
+                    protection.deactivateProtection();
+                    main.getInstance().getLogger().info("§cBot Protection deactivated.");
 
-            if (protection.getThreshold() >= 5) {
-
+                }, 20L * main.getInstance().getConfig().getInt("activate-min"));
+                return;
             }
+            Bukkit.getScheduler().runTaskLater(main.getInstance(), protection::reduceThreshold, 30L);
         }
     }
 }

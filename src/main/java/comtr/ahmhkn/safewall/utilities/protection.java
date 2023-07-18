@@ -1,6 +1,5 @@
 package comtr.ahmhkn.safewall.utilities;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.UUID;
 
@@ -20,6 +19,10 @@ public class protection {
         whiteList.add(uuid);
     }
 
+    public static void resetWhitelist() {
+        whiteList.clear();
+    }
+
     public static void addThreshold() {
         threshold += 1;
     }
@@ -27,6 +30,14 @@ public class protection {
     public static void reduceThreshold() {
         if (threshold > 0)
             threshold -= 1;
+    }
+
+    public static void activateProtection() {
+        protection = true;
+    }
+
+    public static void deactivateProtection() {
+        protection = false;
     }
 
     public static HashSet<UUID> getWhiteList() {

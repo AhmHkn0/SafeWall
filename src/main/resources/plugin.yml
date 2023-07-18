@@ -4,3 +4,17 @@ main: comtr.ahmhkn.safewall.main
 authors: [ AhmHkn ]
 description: Simple AntiBot plugin.
 website: https://ahmhkn.com.tr
+
+
+commands:
+  safewall:
+    description: Main command.
+
+
+permissions:
+  safewall.reset:
+    description: Reset whitelist permission.
+    default: op
+  safewall.reload:
+    description: Reload config permission.
+    default: op

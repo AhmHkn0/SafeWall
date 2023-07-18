@@ -1,2 +1,9 @@
 debug: false
+
+#You can adjust here how many players need to enter within 30 ticks for the protection to become active.
+threshold: 5
+
+#How many minutes will the protection remain active?
+activate-min: 5
+
 kick-message: "&cPlease login again!"

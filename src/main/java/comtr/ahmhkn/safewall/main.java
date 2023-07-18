@@ -1,5 +1,7 @@
 package comtr.ahmhkn.safewall;
 
+import comtr.ahmhkn.safewall.command.cmd;
+import comtr.ahmhkn.safewall.listeners.preloginevent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class main extends JavaPlugin {
@@ -8,13 +10,15 @@ public final class main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        plugin = this;
         comtr.ahmhkn.safewall.utilities.protection.register();
-
+        getServer().getPluginManager().registerEvents(new preloginevent(), plugin);
+        getCommand("safewall").setExecutor(new cmd());
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        getLogger().info("§3Good bye!");
     }
 
 
