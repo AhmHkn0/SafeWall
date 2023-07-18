@@ -36,7 +36,7 @@ public class preloginevent implements Listener {
                     protection.deactivateProtection();
                     main.getInstance().getLogger().info("§cBot Protection deactivated.");
 
-                }, 20L * main.getInstance().getConfig().getInt("activate-min"));
+                }, 20L * 60 * main.getInstance().getConfig().getInt("activate-min"));
                 return;
             }
             Bukkit.getScheduler().runTaskLater(main.getInstance(), protection::reduceThreshold, 30L);
