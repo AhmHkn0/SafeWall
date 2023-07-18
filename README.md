@@ -20,6 +20,10 @@ SafeWall is a simple bot protection plugin for Minecraft servers. This plugin de
 
 SafeWall starts working automatically after installation. No additional configuration is required. The plugin detects and blocks bot attacks on your server. If you wish, you can configure the settings according to you.
 
+
+## Spigot
+https://www.spigotmc.org/resources/safewall-simple-bot-protection.111327/
+
 ## Contact
 
 Ahmet Hakan
