@@ -25,12 +25,16 @@ public class cmd implements CommandExecutor {
             }
             if (args.length == 1) {
                 if (args[0].equalsIgnoreCase("reset")) {
-                    protection.resetWhitelist();
-                    sender.sendMessage("§aWhitelist cleaned.");
+                    if (sender.hasPermission("safewall.reset")) {
+                        protection.resetWhitelist();
+                        sender.sendMessage("§aWhitelist cleaned.");
+                    }
                 }
                 if (args[0].equalsIgnoreCase("reload")) {
-                    protection.resetWhitelist();
-                    sender.sendMessage("§aConfig reloaded.");
+                    if (sender.hasPermission("safewall.reload")) {
+                        protection.resetWhitelist();
+                        sender.sendMessage("§aConfig reloaded.");
+                    }
                 }
             }
         }
