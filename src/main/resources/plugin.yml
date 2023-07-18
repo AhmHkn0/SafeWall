@@ -1,0 +1,6 @@
+name: SafeWall
+version: '${project.version}'
+main: comtr.ahmhkn.safewall.main
+authors: [ AhmHkn ]
+description: Simple AntiBot plugin.
+website: https://ahmhkn.com.tr
