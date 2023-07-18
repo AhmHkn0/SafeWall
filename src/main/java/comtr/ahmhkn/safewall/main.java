@@ -11,6 +11,7 @@ public final class main extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
+        saveDefaultConfig();
         comtr.ahmhkn.safewall.utilities.protection.register();
         getServer().getPluginManager().registerEvents(new preloginevent(), plugin);
         getCommand("safewall").setExecutor(new cmd());
