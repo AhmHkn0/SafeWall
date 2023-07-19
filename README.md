@@ -1,4 +1,4 @@
-![Image](https://i.hizliresim.com/rtsnqtq.png)
+![Image](https://i.hizliresim.com/k01ww9z.png)
 # SafeWall
 
 SafeWall is a simple bot protection plugin for Minecraft servers. This plugin detects and blocks automated attacks and bots on your server.
