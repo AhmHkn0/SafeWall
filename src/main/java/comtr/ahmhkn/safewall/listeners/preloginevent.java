@@ -29,7 +29,7 @@ public class preloginevent implements Listener {
             }, 10L);
         } else {
             protection.addThreshold();
-            if (protection.getThreshold() >= main.getInstance().getConfig().getInt("threshold")) {
+            if (protection.getThreshold() >= main.getInstance().getConfig().getInt("threshold") && !protection.getProtection()) {
                 protection.activateProtection();
                 main.getInstance().getLogger().info("§aBot Protection activated.");
                 Bukkit.getScheduler().runTaskLater(main.getInstance(), () -> {
